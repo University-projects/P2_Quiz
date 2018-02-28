@@ -108,10 +108,10 @@ exports.testCmd = (rl, id) => {
 				quiz.answer = quiz.answer.toLowerCase();
 
 				if(answer === quiz.answer){
-					log('Su respuesta es : ');
+					log('Su respuesta es correcta.');
 					biglog('CORRECTA', 'green');
 				}else{
-					log('Su respuesta es : ');
+					log('Su respuesta es incorrecta');
 					biglog('INCORRECTA', 'red');
 				}
 				rl.prompt();
@@ -151,11 +151,13 @@ exports.playCmd = rl => {
 
 				if(answer === quiz.answer){
 					score++;
-					log('Su respuesta es : ');
+					log('CORRECTO');
 					biglog('CORRECTA', 'green');
 					log(`HA CONSEGUIDO : ${score} PUNTOS `);
 					playOne();
 				}else{
+					log('INCORECTO');
+					log('Fin del juego');
 					biglog('GAME OVER', 'red');
 					log(`PUNTUACIÓN : ${score} PUNTOS `);
 					rl.prompt();
@@ -171,7 +173,7 @@ exports.playCmd = rl => {
 
 exports.creditsCmd = rl => {
 	log('Autor de la práctica:');
-    log('Nicolás Arrieta Larraza');
+    log('NICOLAS ARRIETA LARRAZA');
     rl.prompt();
 };
 
