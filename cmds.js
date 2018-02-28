@@ -156,7 +156,7 @@ exports.playCmd = rl => {
 					log(`HA CONSEGUIDO : ${score} PUNTOS `);
 					playOne();
 				}else{
-					log('INCORECTO');
+					log('INCORECTA');
 					log('Fin del juego');
 					biglog('GAME OVER', 'red');
 					log(`PUNTUACIÓN : ${score} PUNTOS `);
